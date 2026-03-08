@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxury Whisky Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0a0a0f;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h2{
+color:#ffd700;
+font-size:22px;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+font-size:15px;
+}
+
+nav a:hover{
+color:#ffd700;
+}
+
+/* HERO VIDEO */
+
+.hero{
+position:relative;
+height:70vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.bg-video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-1;
+filter:brightness(40%);
+}
+
+.hero-content{
+z-index:2;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+color:#ffd700;
+text-shadow:0 0 20px rgba(255,215,0,0.8);
+}
+
+.hero p{
+margin-top:10px;
+color:#ddd;
+font-size:18px;
+}
+
+/* PRODUCT GRID */
+
+.products{
+padding:80px 60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+/* CARD */
+
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:25px;
+text-align:center;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.02);
+box-shadow:0 20px 40px rgba(0,0,0,0.8);
+border:1px solid #ffd700;
+}
+
+.card img{
+width:150px;
+height:230px;
+object-fit:contain;
+margin-bottom:15px;
+transition:0.4s;
+}
+
+.card:hover img{
+transform:scale(1.08) rotate(-2deg);
+}
+
+.card h2{
+font-size:18px;
+margin-bottom:8px;
+}
+
+.price{
+color:#ffd700;
+margin-bottom:12px;
+}
+
+/* BUTTON */
+
+button{
+padding:10px 25px;
+border:none;
+border-radius:30px;
+background:linear-gradient(45deg,#ffd700,#ffae00);
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px rgba(255,215,0,0.7);
+}
+
+/* SPECIAL PRODUCT */
+
+.special{
+border:2px solid gold;
+background:linear-gradient(145deg,#2b2200,#14141f);
+}
+
+.special h2{
+color:#ffd700;
+}
+
+/* FOOTER */
+
+footer{
+background:#0c0c10;
+padding:40px;
+text-align:center;
+color:#aaa;
+}
+
+/* WHATSAPP BUTTON */
+
+.wa{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
+transition:0.3s;
+}
+
+.wa:hover{
+transform:scale(1.15);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+padding:15px 20px;
+}
+
+nav h2{
+font-size:18px;
+}
+
+nav ul{
+gap:15px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.products{
+padding:60px 20px;
+gap:25px;
+}
+
+.card img{
+width:120px;
+height:180px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body id="home">
+
+<nav>
+
+<h2>Luxury Whisky</h2>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#whisky">Whisky</a></li>
+<li><a href="#premium">Premium</a></li>
+<li><a href="https://wa.me/6287756808208" target="_blank">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<video autoplay muted loop playsinline class="bg-video">
+<source src="https://drive.google.com/uc?export=download&id=1nbCYFrD2i8ZmkOvRHYny7xVJ_LqMooa_" type="video/mp4">
+</video>
+
+<div class="hero-content">
+
+<h1>Luxury Whisky Collection</h1>
+
+
+</div>
+
+</section>
+
+<section id="whisky" class="products">
+
+<div class="card">
+<img src="Jack Daniel Honey.jpeg">
+<h2>Jack Daniel's Honey</h2>
+<p class="price">Rp 270.000</p>
+<a href="https://wa.me/6287756808208?text=Halo%20saya%20ingin%20memesan%20Jack%20Daniel%20Honey">
+<button>Order</button>
+</a>
+</div>
+
+<div class="card">
+<img src="Jameson.jpeg">
+<h2>Jameson</h2>
+<p class="price">Rp 275.000</p>
+<a href="https://wa.me/6287756808208?text=Halo%20saya%20ingin%20memesan%20Jameson">
+<button>Order</button>
+</a>
+</div>
+
+<div class="card">
+<img src="Singleton.jpeg">
+<h2>Singleton</h2>
+<p class="price">Rp 300.000</p>
+<a href="https://wa.me/6287756808208?text=Halo%20saya%20ingin%20memesan%20Singleton">
+<button>Order</button>
+</a>
+</div>
+
+<div class="card">
+<img src="Jim Beam.jpeg">
+<h2>Jim Beam Bourbon</h2>
+<p class="price">Rp 250.000</p>
+<a href="https://wa.me/6287756808208?text=Halo%20saya%20ingin%20memesan%20Jim%20Beam">
+<button>Order</button>
+</a>
+</div>
+
+<div class="card">
+<img src="Red Label.jpeg">
+<h2>Johnnie Walker Red Label</h2>
+<p class="price">Rp 280.000</p>
+<a href="https://wa.me/6287756808208?text=Halo%20saya%20ingin%20memesan%20Red%20Label">
+<button>Order</button>
+</a>
+</div>
+
+<div class="card">
+<img src="Martell.jpeg">
+<h2>Martell VSOP</h2>
+<p class="price">Rp 300.000</p>
+<a href="https://wa.me/6287756808208?text=Halo%20saya%20ingin%20memesan%20Martell">
+<button>Order</button>
+</a>
+</div>
+
+<div class="card">
+<img src="Glenfiddich.jpeg">
+<h2>Glenfiddich 12</h2>
+<p class="price">Rp 280.000</p>
+<a href="https://wa.me/6287756808208?text=Halo%20saya%20ingin%20memesan%20Glenfiddich%2012">
+<button>Order</button>
+</a>
+</div>
+
+<div class="card">
+<img src="Chivas.jpeg">
+<h2>Chivas Regal</h2>
+<p class="price">Rp 280.000</p>
+<a href="https://wa.me/6287756808208?text=Halo%20saya%20ingin%20memesan%20Chivas">
+<button>Order</button>
+</a>
+</div>
+
+<div id="premium" class="card special">
+<img src="Glenfiddich Gran Reserva 21.jpeg">
+<h2>Glenfiddich Gran Reserva 21</h2>
+<p class="price">Rp xxx.xxx</p>
+<a href="https://wa.me/6287756808208?text=Halo%20saya%20ingin%20memesan%20Glenfiddich%2021">
+<button>Premium Order</button>
+</a>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Luxury Whisky Collection</p>
+</footer>
+
+<a class="wa" href="https://wa.me/6287756808208" target="_blank">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+<path d="M20.52 3.48A11.83 11.83 0 0012.01 0C5.38 0 .03 5.36.03 11.97c0 2.11.55 4.18 1.59 6.02L0 24l6.18-1.61a11.93 11.93 0 005.83 1.49h.01c6.63 0 11.98-5.36 11.98-11.97 0-3.2-1.25-6.21-3.48-8.43z"/>
+</svg>
+
+</a>
+
+</body>
+</html>
